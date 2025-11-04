@@ -1,0 +1,95 @@
+{
+  "info": {
+    "name": "Laravel AI Backend",
+    "description": "API collection for Laravel AI backend with fallback support",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "AI Chat",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"What is Laravel?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/ask-ai",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "ask-ai"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AI Chat - Technical Question",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"Explain the MVC pattern in web development\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/ask-ai",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "ask-ai"]
+        }
+      }
+    },
+    {
+      "name": "AI Chat - Code Help",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"How do I create a RESTful API in Laravel?\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/ask-ai",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "ask-ai"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8000",
+      "type": "string"
+    }
+  ]
+}
+
